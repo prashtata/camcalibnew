@@ -1,0 +1,8 @@
+with same parameter with skel: bad matches, distorted image
+
+reduced edge thresh and patch size to 120 from 150: appropriate overlap, acceptable (even good) ratio of good and bad matches
+
+with et and ps at 100, extremely distorted homography, high number of bad matches
+
+Iterative two-sided offset check has significantly improved the matching result, although not much improvement was seen in the homography output
+Possible reason for homography performance stagnation: RANSAC in cv2.findHomography() does a decent job at eliminating outliers 
